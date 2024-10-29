@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 function App() {
   return (
@@ -9,10 +9,10 @@ function App() {
 
       <main>
         <article className="container">
-          <Hero />
-          <Stats />
           <About />
+          {/* <Hero /> */}
           <Skills />
+          <Stats />
           <Projects />
           <Contact />
         </article>
@@ -70,7 +70,7 @@ function Header() {
         <div className="container">
           <h1 className="h1 logo">
             <a href="#">
-              Vice<span>.</span>
+              V<span>.</span>
             </a>
           </h1>
           <div className="navbar-actions">
@@ -100,7 +100,7 @@ function Header() {
           <nav className="navbar" data-navbar>
             <ul className="navbar-list">
               <li>
-                <a href="#home" className="navbar-link">
+                <a href="#" className="navbar-link">
                   Home.
                 </a>
               </li>
@@ -188,13 +188,13 @@ function Hero() {
           </a>
         </li>
         <li>
-          <a href="#" className="hero-social-link">
+          <a href="https://x.com/idam_victor_x1" className="hero-social-link">
             <ion-icon name="logo-twitter"></ion-icon>
             <div className="tooltip">Twitter</div>
           </a>
         </li>
         <li>
-          <a href="#" className="hero-social-link">
+          <a href="https://www.linkedin.com/in/victor-idam/" className="hero-social-link">
             <ion-icon name="logo-linkedin"></ion-icon>
             <div className="tooltip">Linkedin</div>
           </a>
@@ -223,7 +223,7 @@ function Stats() {
             </div>
 
             <h2 className="h2 card-title">
-              12+ <strong>Years of Experience</strong>
+              3+ <strong>Years of Experience</strong>
             </h2>
 
             <ion-icon name="chevron-forward-outline"></ion-icon>
@@ -240,7 +240,7 @@ function Stats() {
             </div>
 
             <h2 className="h2 card-title">
-              230+ <strong>Completed Projects</strong>
+              10+ <strong>Completed Projects</strong>
             </h2>
 
             <ion-icon name="chevron-forward-outline"></ion-icon>
@@ -257,7 +257,7 @@ function Stats() {
             </div>
 
             <h2 className="h2 card-title">
-              95+ <strong>Happy Clients</strong>
+              5 <strong>Happy Clients</strong>
             </h2>
 
             <ion-icon name="chevron-forward-outline"></ion-icon>
@@ -288,19 +288,31 @@ function About() {
         </h2>
 
         <p className="section-text">
-          Hi! I’m Jack Reacher, and I’m a developer who has passion for building
-          clean web applications with intuitive functionalities. I enjoy the
-          process of turning ideas into reality using creative solutions. I’m
-          always curious about learning new skills, tools, and concepts. In
-          addition to working on various solo full stack projects, I have worked
-          with creative teams, which involves daily stand-ups and
-          communications, source control, and project management.
+          I'm a web developer with expertise in front-end technologies like
+          HTML, CSS, JavaScript, and React. With experience in crafting
+          high-performance, accessible web solutions, I recently contributed to
+          Genesys Tech Hub, where my work on responsive components improved load
+          speed by 35% and enhanced user inclusivity. My approach combines
+          technical skills with a strong focus on user experience and
+          collaboration.
+          <p className="mb-10"></p>I graduated with first-class honors in
+          Computer Science from Enugu State University of Science and
+          Technology, where I was recognized as the top student in my cohort.
+          I’m passionate about building efficient, user-centered web
+          applications and enjoy connecting with others in the tech community to
+          drive impactful projects.
         </p>
 
         <div className="btn-group">
-          <button className="btn btn-secondary">Hire me</button>
-
-          <button className="btn btn-primary">Download cv</button>
+          <a
+            href="mailto:idamvictorscholar@gmail.com"
+            className="btn btn-secondary"
+          >
+            Hire me
+          </a>
+          <a href="../src/assets/Victor_Idam_Portfolio.pdf" download className="btn btn-primary">
+            Download CV
+          </a>
         </div>
       </div>
     </section>
@@ -392,13 +404,12 @@ function Skills() {
               { name: "CSS3", img: "./assets/images/css3.png" },
               { name: "JavaScript", img: "./assets/images/javascript.png" },
               { name: "TypeScript", img: "./assets/images/typescript.png" },
-              { name: "jQuery", img: "./assets/images/jquery.png" },
-              { name: "Bootstrap", img: "./assets/images/bootstrap.png" },
-              { name: "Angular", img: "./assets/images/angular.png" },
               { name: "React", img: "./assets/images/react.png" },
-              { name: "Vue", img: "./assets/images/vue.png" },
+              {
+                name: "Next Js",
+                img: "https://cdn.builder.io/api/v1/image/assets/TEMP/a7f2403b313b286f1b57b53a153d2de95d40967d0ef155944f7b7a24e63899b6?placeholderIfAbsent=true&apiKey=2aa17bc6a73c42939c0600ac0d9e09f3",
+              },
               { name: "Firebase", img: "./assets/images/firebase.png" },
-              { name: "PugJs", img: "./assets/images/pugjs.png" },
               { name: "SASS", img: "./assets/images/sass.png" },
             ].map((skill) => (
               <li key={skill.name}>
@@ -414,18 +425,21 @@ function Skills() {
         ) : (
           <ul className="tools-list">
             {[
-              { name: "Ajax", img: "./assets/images/ajax.png" },
-              { name: "Gulp", img: "./assets/images/gulp.png" },
+              {
+                name: "Figma",
+                img: "https://cdn.builder.io/api/v1/image/assets/TEMP/be93feae34fba115811df19fad52377af95c0484810b1632eeab296b7e848828?placeholderIfAbsent=true&apiKey=2aa17bc6a73c42939c0600ac0d9e09f3",
+              },
+              {
+                name: "Zoom",
+                img: "https://cdn.builder.io/api/v1/image/assets/TEMP/d6e8e0a547382182254d0a1051f3766b7d3de87c3a8562806ea401c5b42eb436?placeholderIfAbsent=true&apiKey=2aa17bc6a73c42939c0600ac0d9e09f3",
+              },
               { name: "Webpack", img: "./assets/images/webpack.png" },
               { name: "Git", img: "./assets/images/git.png" },
               { name: "Npm", img: "./assets/images/npm.png" },
               { name: "Command Line", img: "./assets/images/command.png" },
               { name: "VS Code", img: "./assets/images/vs-code.png" },
-              { name: "Trello", img: "./assets/images/trello.png" },
               { name: "ClickUp", img: "./assets/images/clickup.png" },
               { name: "Slack", img: "./assets/images/slack.png" },
-              { name: "Photoshop", img: "./assets/images/photoshop.png" },
-              { name: "Adobe XD", img: "./assets/images/adobe-xd.png" },
             ].map((tool) => (
               <li key={tool.name}>
                 <div className="skill-card">
@@ -458,7 +472,8 @@ const projectsData = [
   {
     title: "Travel list",
     date: "April 2022",
-    imgSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/9b0689637b55ec9bc56dc31d4e6615becc6ba5c3beb46489996705e7a6db8df4?apiKey=bc155cd4463f4c48a216b01c1991193c&",
+    imgSrc:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/9b0689637b55ec9bc56dc31d4e6615becc6ba5c3beb46489996705e7a6db8df4?apiKey=bc155cd4463f4c48a216b01c1991193c&",
     altText: "Travel list",
     liveLink: "https://travel-list-pied-gamma.vercel.app/",
     githubLink: "https://github.com/idamvictor/travel-list.git",
@@ -466,7 +481,8 @@ const projectsData = [
   {
     title: "Serene",
     date: "April 2022",
-    imgSrc: "./assets/images/project-3.png",
+    imgSrc:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/fd23d93063231a398566e1695391902148bf411c815ea2170718fa03edf1fb6d?placeholderIfAbsent=true&apiKey=2aa17bc6a73c42939c0600ac0d9e09f3",
     altText: "Serene",
     liveLink: "https://serene-ivory.vercel.app/",
     githubLink: "https://github.com/idamvictor/serene.git",
@@ -474,7 +490,8 @@ const projectsData = [
   {
     title: "Media hub",
     date: "April 2022",
-    imgSrc: "./assets/images/project-4.png",
+    imgSrc:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/d9c50260238f06d002d8f9a45e1bd770eca3b49ef27204cb49faeb3a800e0273?placeholderIfAbsent=true&apiKey=2aa17bc6a73c42939c0600ac0d9e09f3",
     altText: "Media hub",
     liveLink: "https://f-3.vercel.app",
     githubLink: "https://github.com/GenesysLearnable/DATA-FE-2.git",
@@ -482,16 +499,17 @@ const projectsData = [
   {
     title: "Ecommerce",
     date: "April 2022",
-    imgSrc: "./assets/images/project-5.png",
-    altText:
-      "Ecommerce",
+    imgSrc:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/c29b1ce6407cfecf32cae9865795b69200dc2590796e4622e6f653a192a47d30?placeholderIfAbsent=true&apiKey=2aa17bc6a73c42939c0600ac0d9e09f3",
+    altText: "Ecommerce",
     liveLink: "https://standardization-l23-g3et.vercel.app/",
     githubLink: "https://github.com/idamvictor/standardization-l23.git",
   },
   {
     title: "Omni food",
     date: "April 2022",
-    imgSrc: "./assets/images/project-6.png",
+    imgSrc:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/276e0ac7f8fa72fe8865d5e93280e6845a752c0fed3f030379545072ace208ae?placeholderIfAbsent=true&apiKey=2aa17bc6a73c42939c0600ac0d9e09f3",
     altText: "Omni food",
     liveLink: "https://omnifood-jet.vercel.app/",
     githubLink: "https://github.com/idamvictor/omnifood.git",
@@ -499,7 +517,8 @@ const projectsData = [
   {
     title: "pig game",
     date: "April 2022",
-    imgSrc: "./assets/images/project-7.png",
+    imgSrc:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/979c9a0115cadc34a0331d000bfd4850a0ef077a1e034710596e7e4f53fe756a?placeholderIfAbsent=true&apiKey=2aa17bc6a73c42939c0600ac0d9e09f3",
     altText: "pig game",
     liveLink: "https://pig-game-eta-drab.vercel.app/",
     githubLink: "https://github.com/idamvictor/pig-game.git",
@@ -507,7 +526,8 @@ const projectsData = [
   {
     title: "Worldwise",
     date: "April 2022",
-    imgSrc: "./assets/images/project-7.png",
+    imgSrc:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/b5df43500cafe6e3d24cbc660c4741a98867cee4dd1e93f42b847d02af1547a8?placeholderIfAbsent=true&apiKey=2aa17bc6a73c42939c0600ac0d9e09f3",
     altText: "Worldwise",
     liveLink: "https://worldwise-self-seven.vercel.app/",
     githubLink: "https://github.com/idamvictor/worldwise.git",
@@ -515,7 +535,8 @@ const projectsData = [
   {
     title: "Usepopcorn",
     date: "April 2022",
-    imgSrc: "./assets/images/project-7.png",
+    imgSrc:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/d74ddefdfa363b7bd515da08b19d61c754e5e7599e385cfe4cecf09651602f26?placeholderIfAbsent=true&apiKey=2aa17bc6a73c42939c0600ac0d9e09f3",
     altText: "Usepopcorn",
     liveLink: "https://use-popcorn-woad.vercel.app/",
     githubLink: "https://github.com/idamvictor/usePopcorn.git",
@@ -563,23 +584,24 @@ const Projects = () => {
       <ul className="project-list">
         <li>
           <div className="project-content section-content">
-            <p className="section-subtitle">My Works</p>
+            <p className="section-subtitle">My Projects</p>
             <h2 className="h3 section-title">
-              See My Works Which Will Amaze You!
+              See the Projects i've worked on
             </h2>
             <p className="section-text">
               We develop the best quality website that serves for the long-term.
-              Well-documented, clean, easy and elegant interface helps any
-              non-technical clients.
+              Responsive, Optimised, Documented and Clean
             </p>
           </div>
         </li>
         {projectsData.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
-        <li>
+
+        {/* Load More button */}
+        {/* <li>
           <button className="load-more">Load more work</button>
-        </li>
+        </li> */}
       </ul>
     </section>
   );
@@ -602,7 +624,7 @@ function Contact() {
         </p>
 
         <ul className="contact-list">
-          <li className="contact-list-item">
+          {/* <li className="contact-list-item">
             <div className="contact-item-icon">
               <ion-icon name="location-outline"></ion-icon>
             </div>
@@ -614,9 +636,9 @@ function Contact() {
                 941 Saqrqorish Road, alandalos, grnata, wa 47122-4194
               </address>
             </div>
-          </li>
+          </li> */}
 
-          <li className="contact-list-item">
+          {/* <li className="contact-list-item">
             <div className="contact-item-icon">
               <ion-icon name="call-outline"></ion-icon>
             </div>
@@ -632,7 +654,7 @@ function Contact() {
                 (09) 765 432 200
               </a>
             </div>
-          </li>
+          </li> */}
 
           <li className="contact-list-item">
             <div className="contact-item-icon">
@@ -643,27 +665,23 @@ function Contact() {
               <h3 className="h4 contact-item-title">Email:</h3>
 
               <a href="mailto:info@jack.com" className="contact-info">
-                info@jack.com
-              </a>
-
-              <a href="mailto:support@jack.com" className="contact-info">
-                support@jack.com
+                idamvictorscholar@gmail.com
               </a>
             </div>
           </li>
 
           <li>
             <ul className="contac-social-list">
-              <li>
+              {/* <li>
                 <a href="#" className="contact-social-link">
                   <div className="tooltip">Facebook</div>
 
                   <ion-icon name="logo-facebook"></ion-icon>
                 </a>
-              </li>
+              </li> */}
 
               <li>
-                <a href="#" className="contact-social-link">
+                <a target="_blank" href="https://x.com/idam_victor_x1" className="contact-social-link">
                   <div className="tooltip">Twitter</div>
 
                   <ion-icon name="logo-twitter"></ion-icon>
@@ -671,20 +689,20 @@ function Contact() {
               </li>
 
               <li>
-                <a href="#" className="contact-social-link">
+                <a target="_blank" href="https://www.linkedin.com/in/victor-idam/" className="contact-social-link">
                   <div className="tooltip">Linkedin</div>
 
                   <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
               </li>
 
-              <li>
+              {/* <li>
                 <a href="#" className="contact-social-link">
                   <div className="tooltip">Youtube</div>
 
                   <ion-icon name="logo-youtube"></ion-icon>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </li>
         </ul>
@@ -692,7 +710,7 @@ function Contact() {
 
       <form action="" className="contact-form">
         <div className="form-wrapper">
-          <label for="name" className="form-label">
+          <label htmlFor="name" className="form-label">
             Name
           </label>
 
@@ -711,7 +729,7 @@ function Contact() {
         </div>
 
         <div className="form-wrapper">
-          <label for="email" className="form-label">
+          <label htmlFor="email" className="form-label">
             Email
           </label>
 
@@ -785,9 +803,9 @@ function Footer() {
           </a>
         </p>
 
-        <p className="copyright">
+        {/* <p className="copyright">
           &copy; 2022 <a href="#">codewithsadee</a>. All rights reserved
-        </p>
+        </p> */}
       </div>
     </footer>
   );
